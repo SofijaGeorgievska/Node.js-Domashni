@@ -4,6 +4,8 @@
 // grade D >= 60
 // grade F
 
+//results.push({ name: student.name, grade: grade });
+
 const students = [
   { name: "Alice", scores: [85, 92, 78] },
   { name: "Bob", scores: [59, 63, 70] },
@@ -27,21 +29,27 @@ console.log(students);
 
 //Najdi Ocenka
 function calculateGrade(students) {
-students.forEach((student) => {
-  const average = student.average;
-  const grade =
-    average >= 90
-      ? "A"
-      : average >= 80
-      ? "B" 
-      : average >= 70
-      ? "C"
-      : average >= 60
-      ? "D"
-      : "F";
-  student.grade = grade;
-});
+  students.forEach((student) => {
+    const average = student.average;
+    const grade =
+      average >= 90
+        ? "A"
+        : average >= 80
+        ? "B"
+        : average >= 70
+        ? "C"
+        : average >= 60
+        ? "D"
+        : "F";
+    student.grade = grade;
+  });
 }
 
 calculateGrade(students);
+
+students.forEach((students) => {
+  delete students.average;
+  delete students.scores;
+});
+
 console.log(students);
