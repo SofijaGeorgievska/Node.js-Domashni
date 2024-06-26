@@ -12,6 +12,7 @@ const students = [
   { name: "Eve", scores: [75, 80, 82] },
 ];
 
+students[0].scores[0];
 //Najdi prosek
 for (let i = 0; i < students.length; i++) {
   let totalScores = 0;
@@ -23,7 +24,6 @@ for (let i = 0; i < students.length; i++) {
 }
 
 console.log(students);
-
 
 //Najdi Ocenka
 function calculateGrade(students) {
